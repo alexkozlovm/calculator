@@ -14,13 +14,26 @@ function appendOperator(operator) {
 }
 
 function clearDisplay() {
-    display.innerHTML = "";
-}
-
-function updateDisplay() {
-    calculator.display.value = calculator.display.value;
+    display.innerHTML = "0";
 }
 
 function calculate() {
-    calculator.display.val
+    let result; 
+    if (display.innerHTML.includes("+")) {
+        result = display.innerHTML.split(" + ").reduce((a, b) => Number(a) + Number(b));
+    }  
+    else if (display.innerHTML.includes("-")) {
+        result = display.innerHTML.split(" - ").reduce((a, b) => Number(a) - Number(b));
+    }
+    else if (display.innerHTML.includes("*")) {
+        result = display.innerHTML.split(" * ").reduce((a, b) => Number(a) * Number(b));
+    }
+    else if (display.innerHTML.includes("/")) {
+        result = display.innerHTML.split(" / ").reduce((a, b) => Number(a) / Number(b));
+    }
+    else {
+        result = "Error!"
+    }
+    display.innerHTML = result;
 }
+
