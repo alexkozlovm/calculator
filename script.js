@@ -1,6 +1,11 @@
 const display = document.querySelector(".display");
+display.innerHTML = "0";
 
 function appendNumber(number) {
+    if (display.innerHTML === "0") {
+        display.innerHTML = number;
+        return;
+    }
     display.innerHTML += number;
 }
 
@@ -9,7 +14,7 @@ function appendOperator(operator) {
 }
 
 function clearDisplay() {
-    calculator.display.value = "";
+    display.innerHTML = "";
 }
 
 function updateDisplay() {
@@ -17,5 +22,5 @@ function updateDisplay() {
 }
 
 function calculate() {
-    calculator.display.value = eval(calculator.display.value);
+    calculator.display.val
 }
