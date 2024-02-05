@@ -5,7 +5,7 @@ function appendNumber(number) {
 }
 
 function appendOperator(operator) {
-    calculator.display.value += operator;
+    display.innerHTML += ` ${operator} `;
 }
 
 function clearDisplay() {
