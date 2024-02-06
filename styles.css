@@ -3,7 +3,9 @@
     --clr-secondary: rgb(27, 27, 27);
     --clr-main-dark: #d09923;
     --clr-slate: #494949;
+    --clr-slate-dark: #3a3a3a;
     --clr-text: #e6e6e6;
+    --clr-main-darker: #b37e0f;
 }
 *, *::after, *::before {
   box-sizing: border-box;
@@ -38,11 +40,6 @@ main button {
     height: 150px;
     border-radius: 10px;
     font-size: 3rem;
-}
-#clear {
-    background-color: var(--clr-main-dark);
-}
-#equal {
     background-color: var(--clr-main-dark);
 }
 footer {
@@ -79,4 +76,11 @@ footer {
 #plus {
     background-color: var(--clr-main-dark);
     border-bottom-right-radius: 20px;
+}
+button:hover {
+    cursor: pointer;
+    background-color: var(--clr-slate-dark);   
+}
+#clear:hover, #equal:hover, #plus:hover {
+    background-color: var(--clr-main-darker);
 }
