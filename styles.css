@@ -16,6 +16,7 @@ body {
 }
 header {
     background-color: var(--clr-main-dark);
+    text-align: center;
 }
 main {
     background-color: var(--clr-main);
@@ -27,7 +28,19 @@ main button {
 }
 footer {
     background-color: var(--clr-main-dark);
+    text-align: center;
 }
 #calculator {
-    background-color: var(--clr-secondary);
+    background-color: var(--clr-secondary); 
+    
+}
+#display {
+    background-color: var(--clr-slate);
+    color: var(--clr-text);
+    text-align: right;
+}
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
