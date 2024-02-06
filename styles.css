@@ -60,12 +60,13 @@ footer {
     background-color: var(--clr-slate);
     color: var(--clr-text);
     text-align: right;   
-   padding: 3rem;
+   padding: 2rem 10px;
     width: 90%;
-    height: 17%;
+    height: 25%;
     margin: auto;
     border-radius: 5px;
     margin-bottom: 5px;
+    font-size: 3.5rem;
 }
 #buttons {
     display: flex;
