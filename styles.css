@@ -33,6 +33,7 @@ main button {
     width: 150px;
     height: 150px;
     font-size: 2rem;
+    transition: all 0.3s ease;
 }
 #clear, #equal, #plus {
     margin: 10px 5px;
@@ -72,7 +73,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 5px;
+    gap: 7px;
 }
 #plus {
     background-color: var(--clr-main-dark);
@@ -82,6 +83,10 @@ button:hover {
     cursor: pointer;
     background-color: var(--clr-slate-dark);   
 }
+button:hover {
+    transform: translateY(-5px);
+}
 #clear:hover, #equal:hover, #plus:hover {
     background-color: var(--clr-main-darker);
 }
+
