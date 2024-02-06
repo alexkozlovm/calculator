@@ -1,0 +1,33 @@
+:root {
+    --clr-main: #FCB31B;
+    --clr-secondary: rgb(27, 27, 27);
+    --clr-main-dark: #d09923;
+    --clr-slate: #494949;
+    --clr-text: #e6e6e6;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+}
+body {
+    color: var(--clr-text);
+}
+header {
+    background-color: var(--clr-main-dark);
+}
+main {
+    background-color: var(--clr-main);
+}
+main button {
+    background-color: var(--clr-slate);
+    color: var(--clr-text);
+    border: 0;
+}
+footer {
+    background-color: var(--clr-main-dark);
+}
+#calculator {
+    background-color: var(--clr-secondary);
+}
