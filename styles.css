@@ -46,7 +46,8 @@ button {
 .small-button {
     background-color: var(--clr-slate);
     border-radius: 50%;
-    padding: 6.8% 9%;
+    width: 24%;
+    padding: 9% 0;
     font-size: 2rem;
     transition: all 0.3s ease;  
 }
@@ -58,10 +59,10 @@ footer {
 }
 #calculator {
     background-color: var(--clr-secondary); 
-    width: 29%;
+    width: 30%;
     height: auto;
     margin: 2rem auto;
-    padding-top: 15px;
+    padding: 15px;
     border-radius: 15px;
     animation: slideIn 1s;
 }
