@@ -25,23 +25,31 @@ header {
 main {
     background-color: var(--clr-main);
 }
-main button {
-    background-color: var(--clr-slate);
+button {
     color: var(--clr-text);
     border: 0;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    font-size: 2rem;
-    transition: all 0.3s ease;
+    
 }
-#clear, #equal, #plus {
-    margin: 10px 5px;
-    width: 295px;
-    height: 150px;
+#big-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.big-button {
+    margin: 1%;
+    width: 45%;
+    padding: 5.5% 0;
     border-radius: 10px;
     font-size: 3rem;
     background-color: var(--clr-main-dark);
+}
+.small-button {
+    background-color: var(--clr-slate);
+    border-radius: 50%;
+    width: 24%;
+    padding: 9% 0;
+    font-size: 2rem;
+    transition: all 0.3s ease;  
 }
 footer {
     background-color: var(--clr-main-dark);
@@ -51,10 +59,10 @@ footer {
 }
 #calculator {
     background-color: var(--clr-secondary); 
-    width: 28%;
+    width: 30%;
     height: auto;
     margin: 2rem auto;
-    padding-top: 15px;
+    padding: 15px;
     border-radius: 15px;
     animation: slideIn 1s;
 }
@@ -87,14 +95,19 @@ button:hover {
 button:hover {
     transform: translateY(-5px);
 }
-#clear:hover, #equal:hover, #plus:hover {
+.big-button:hover {
     background-color: var(--clr-main-darker);
 }
 @keyframes slideIn {
     from {
-        transform: translatey(100vh);
+        transform: translatey(150vh);
     }
     to {
         transform: translateX(0);
+    }
+}
+@media (max-width: 1200px) {
+    #calculator {
+        width: 70%;
     }
 }
