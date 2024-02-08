@@ -6,6 +6,8 @@
     --clr-slate-dark: #3a3a3a;
     --clr-text: #e6e6e6;
     --clr-main-darker: #b37e0f;
+    --clr-slate-light: #5e5e5e;
+    --clr-slate-lightish: #6e6e6e;
 }
 *, *::after, *::before {
   box-sizing: border-box;
@@ -49,6 +51,7 @@ button {
     width: 20%;
     height: 11vh;
     font-size: 2rem;
+    margin: 1%;
 }
 footer {
     background-color: var(--clr-main-dark);
@@ -81,11 +84,12 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 7px;
 }
-#plus {
-    background-color: var(--clr-main-dark);
-    border-bottom-right-radius: 20px;
+.operator {
+    background-color: var(--clr-slate-light);
+}
+.operator:hover {
+    background-color: var(--clr-slate-lightish);
 }
 button:hover {
     cursor: pointer;
