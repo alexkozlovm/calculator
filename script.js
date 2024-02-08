@@ -1,6 +1,20 @@
 const display = document.querySelector(".display");
+const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+const body = document.querySelector("body");
+const header = document.querySelector("header");
+const main = document.querySelector("main");
+const footer = document.querySelector("footer");
+
 display.innerHTML = "0";
+
 window.addEventListener('keydown', handleKeyboardInput)
+
+if (systemSettingDark.matches) {
+    body.style.backgroundColor = "var(--clr-slate)";
+    header.style.backgroundColor = "var(--clr-slate-dark)";
+    main.style.backgroundColor = "var(--clr-slate)";
+    footer.style.backgroundColor = "var(--clr-slate-dark)";
+}
 
 function appendNumber(number) {
     if (display.innerHTML === "0") {
@@ -55,4 +69,8 @@ function handleKeyboardInput(input) {
     if (input.key === 'Escape') clearDisplay()
     if (input.key === '+' || input.key === '-' || input.key === '*' || input.key === '/')
     appendSomething('operator', input.key);
+}
+
+function themeChange(theme) {
+    
 }

@@ -122,21 +122,7 @@ button:hover {
         height: 24vh;
     }
 }
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--clr-slate);
-    }
-    header {
-        background-color: var(--clr-slate-dark);
-    }
-    main {
-        background-color: var(--clr-slate);
-    }
-    footer {
-        background-color: var(--clr-slate-dark);
-    }
-}
-/* switch settings 👇 */
+/* UI switch settings 👇 */
 
 .ui-switch {
     /* switch */
