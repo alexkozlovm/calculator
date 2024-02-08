@@ -6,6 +6,8 @@
     --clr-slate-dark: #3a3a3a;
     --clr-text: #e6e6e6;
     --clr-main-darker: #b37e0f;
+    --clr-slate-light: #5e5e5e;
+    --clr-slate-lightish: #6e6e6e;
 }
 *, *::after, *::before {
   box-sizing: border-box;
@@ -46,9 +48,10 @@ button {
 .small-button {
     background-color: var(--clr-slate);
     border-radius: 50%;
-    width: 24%;
-    padding: 9% 0;
+    width: 20%;
+    height: 11vh;
     font-size: 2rem;
+    margin: 1%;
 }
 footer {
     background-color: var(--clr-main-dark);
@@ -58,7 +61,7 @@ footer {
 }
 #calculator {
     background-color: var(--clr-secondary); 
-    width: 30%;
+    width: 32%;
     height: auto;
     margin: 2rem auto;
     padding: 15px;
@@ -81,11 +84,12 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 7px;
 }
-#plus {
-    background-color: var(--clr-main-dark);
-    border-bottom-right-radius: 20px;
+.operator {
+    background-color: var(--clr-slate-light);
+}
+.operator:hover {
+    background-color: var(--clr-slate-lightish);
 }
 button:hover {
     cursor: pointer;
@@ -108,5 +112,8 @@ button:hover {
 @media (max-width: 1200px) {
     #calculator {
         width: 70%;
+    }
+    .small-button {
+        height: 24vh;
     }
 }
