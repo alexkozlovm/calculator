@@ -54,7 +54,7 @@ button {
     background-color: var(--clr-slate);
     border-radius: 50%;
     width: 20%;
-    height: 11vh;
+    height: 11.4vh;
     font-size: 2rem;
     margin: 1%;
 }
@@ -114,13 +114,65 @@ button:hover {
         transform: translateX(0);
     }
 }
+@media (max-height: 1200px) {
+    .small-button {
+        height: 12vh;
+    }
+}
+@media (max-height: 1000px) {
+    .small-button {
+        height: 14.5vh;
+    }
+}
+@media (max-height: 800px) {
+    .small-button {
+        height: 17.5vh;
+    }
+}
+@media (max-height: 600px) {
+    .small-button {
+        height: 21.5vh;
+    }
+}
+@media (max-height: 400px) {
+    .small-button {
+        height: 25vh;
+    }
+}
+@media (max-width: 2000px) {
+    #calculator {
+        width: 40%;
+    }   
+}
+@media (max-width: 1600px) {
+    #calculator {
+        width: 45%;
+    }   
+}
+@media (max-width: 1400px) {
+    #calculator {
+        width: 50%;
+    }   
+}
 @media (max-width: 1200px) {
     #calculator {
+        width: 60%;
+    }   
+}
+@media (max-width: 1000px) {
+    #calculator {
         width: 70%;
-    }
-    .small-button {
-        height: 24vh;
-    }
+    }   
+}
+@media (max-width: 800px) {
+    #calculator {
+        width: 80%;
+    }   
+}
+@media (max-width: 600px) {
+    #calculator {
+        width: 90%;
+    }   
 }
 /* UI switch settings 👇 */
 
