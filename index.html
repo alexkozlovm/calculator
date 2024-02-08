@@ -24,22 +24,22 @@
                 <button class="big-button" id="clear" onclick="clearDisplay()">clear</button>
                 <button class="big-button" id="delete" onclick="deleteLast()">delete</button>
             </div>
-          <button class="small-button" onclick="appendNumber(1)">1</button>
-          <button class="small-button" onclick="appendNumber(2)">2</button>
-          <button class="small-button" onclick="appendNumber(3)">3</button>
-          <button class="small-button operator" onclick="appendOperator('-')">-</button>
-          <button class="small-button" onclick="appendNumber(4)">4</button>
-          <button class="small-button" onclick="appendNumber(5)">5</button>
-          <button class="small-button" onclick="appendNumber(6)">6</button>
-          <button class="small-button operator" onclick="appendOperator('/')">/</button>
-          <button class="small-button" onclick="appendNumber(7)">7</button>
-          <button class="small-button" onclick="appendNumber(8)">8</button>
-          <button class="small-button" onclick="appendNumber(9)">9</button>
-          <button class="small-button operator" onclick="appendOperator('*')">*</button>
-          <button class="small-button" onclick="appendNumber(0)">0</button>
-          <button class="small-button" onclick="appendOperator('.')">.</button>
+          <button class="small-button" onclick="appendSomething('number', 1)">1</button>
+          <button class="small-button" onclick="appendSomething('number', 2)">2</button>
+          <button class="small-button" onclick="appendSomething('number', 3)">3</button>
+          <button class="small-button operator" onclick="appendSomething('operator', '-')">-</button>
+          <button class="small-button" onclick="appendSomething('number', 4)">4</button>
+          <button class="small-button" onclick="appendSomething('number', 5)">5</button>
+          <button class="small-button" onclick="appendSomething('number', 6)">6</button>
+          <button class="small-button operator" onclick="appendSomething('operator', '/')">/</button>
+          <button class="small-button" onclick="appendSomething('number', 7)">7</button>
+          <button class="small-button" onclick="appendSomething('number', 8)">8</button>
+          <button class="small-button" onclick="appendSomething('number', 9)">9</button>
+          <button class="small-button operator" onclick="appendSomething('operator', '*')">*</button>
+          <button class="small-button" onclick="appendSomething('number', 0)">0</button>
+          <button class="small-button" onclick="appendSomething('number', '.')">.</button>
           <button class="small-button" id="equal" onclick="calculate()">=</button>
-          <button class="small-button operator" id="plus" onclick="appendOperator('+')">+</button>
+          <button class="small-button operator" id="plus" onclick="appendSomething('operator', '+')">+</button>
         </div>
       </div>
     </main>
