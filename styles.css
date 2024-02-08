@@ -46,8 +46,8 @@ button {
 .small-button {
     background-color: var(--clr-slate);
     border-radius: 50%;
-    width: 24%;
-    padding: 9% 0;
+    width: 20%;
+    height: 11vh;
     font-size: 2rem;
 }
 footer {
@@ -58,7 +58,7 @@ footer {
 }
 #calculator {
     background-color: var(--clr-secondary); 
-    width: 30%;
+    width: 32%;
     height: auto;
     margin: 2rem auto;
     padding: 15px;
@@ -108,5 +108,8 @@ button:hover {
 @media (max-width: 1200px) {
     #calculator {
         width: 70%;
+    }
+    .small-button {
+        height: 24vh;
     }
 }
