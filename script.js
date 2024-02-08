@@ -20,6 +20,11 @@ function clearDisplay() {
     display.innerHTML = "0";
 }
 
+function deleteLast() {
+    display.innerHTML = display.innerHTML.slice(0, -1);
+    if (display.innerHTML === "") display.innerHTML = "0";
+}
+
 function calculate() {
     let result; 
     if (display.innerHTML.includes("+")) {
@@ -43,7 +48,8 @@ function calculate() {
 function handleKeyboardInput(input) {
     if (input.key >= 0 && input.key <= 9 || input.key === '.'   ) appendNumber(input.key)
     if (input.key === '=' || input.key === 'Enter') calculate()
-    if (input.key === 'Backspace') clearDisplay()
+    if (input.key === 'Backspace') deleteLast()
+    if (input.key === 'Escape') clearDisplay()
     if (input.key === '+' || input.key === '-' || input.key === '*' || input.key === '/')
     appendOperator(input.key);
 }
