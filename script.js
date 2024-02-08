@@ -51,7 +51,7 @@ function appendNumber(number) {
 }
 function appendSomething(type, thing) {
     if (display.innerHTML === 'Error!' || display.innerHTML === 'NaN' || display.innerHTML === 'NaN' ) clearDisplay()
-    if (display.innerHTML.length > 15) return;
+    if (display.innerHTML.length > 13) return;
     if (type === "operator") appendOperator(thing)
     if (type === "number") appendNumber(thing)
 }
@@ -64,7 +64,12 @@ function clearDisplay() {
 }
 
 function deleteLast() {
-    display.innerHTML = display.innerHTML.slice(0, -1);
+    let content = display.innerHTML;
+    if (content.endsWith(' + ') || content.endsWith(' - ') || content.endsWith(' * ') || content.endsWith(' / ')) {
+        display.innerHTML = content.slice(0, -3);
+    } else {
+        display.innerHTML = content.slice(0, -1);
+    }
     if (display.innerHTML === "") display.innerHTML = "0";
 }
 
