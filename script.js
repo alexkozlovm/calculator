@@ -5,17 +5,41 @@ const header = document.querySelector("header");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
 const sliderCircle = document.querySelector(".slider .circle ");
+const slider = document.querySelector("input[type='checkbox']");
 
 display.innerHTML = "0";
 
 window.addEventListener('keydown', handleKeyboardInput)
+slider.addEventListener('change', choseTheme)
 
 if (systemSettingDark.matches) {
-    body.style.backgroundColor = "var(--clr-slate)";
-    header.style.backgroundColor = "var(--clr-slate-dark)";
-    main.style.backgroundColor = "var(--clr-slate)";
-    footer.style.backgroundColor = "var(--clr-slate-dark)";
-    sliderCircle.style.backgroundColor = "var(--clr-main)";
+    darkTheme();
+}
+
+function choseTheme() {
+    if (slider.checked) {
+        darkTheme();
+    } else {
+        lightTheme();
+    }
+}
+
+function lightTheme() { 
+        slider.checked = false;
+        body.style.backgroundColor = "var(--clr-main)";
+        header.style.backgroundColor = "var(--clr-main-dark)";
+        main.style.backgroundColor = "var(--clr-main)";
+        footer.style.backgroundColor = "var(--clr-main-dark)";
+        sliderCircle.style.backgroundColor = "var(--clr-slate)";
+}
+
+function darkTheme() {
+        slider.checked = true;
+        body.style.backgroundColor = "var(--clr-slate)";
+        header.style.backgroundColor = "var(--clr-slate-dark)";
+        main.style.backgroundColor = "var(--clr-slate)";
+        footer.style.backgroundColor = "var(--clr-slate-dark)";
+        sliderCircle.style.backgroundColor = "var(--clr-main)";
 }
 
 function appendNumber(number) {
@@ -73,6 +97,3 @@ function handleKeyboardInput(input) {
     appendSomething('operator', input.key);
 }
 
-function themeChange(theme) {
-    
-}
