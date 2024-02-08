@@ -4,16 +4,42 @@ const body = document.querySelector("body");
 const header = document.querySelector("header");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
+const sliderCircle = document.querySelector(".slider .circle ");
+const slider = document.querySelector("input[type='checkbox']");
 
 display.innerHTML = "0";
 
 window.addEventListener('keydown', handleKeyboardInput)
+slider.addEventListener('change', choseTheme)
 
 if (systemSettingDark.matches) {
-    body.style.backgroundColor = "var(--clr-slate)";
-    header.style.backgroundColor = "var(--clr-slate-dark)";
-    main.style.backgroundColor = "var(--clr-slate)";
-    footer.style.backgroundColor = "var(--clr-slate-dark)";
+    darkTheme();
+}
+
+function choseTheme() {
+    if (slider.checked) {
+        darkTheme();
+    } else {
+        lightTheme();
+    }
+}
+
+function lightTheme() { 
+        slider.checked = false;
+        body.style.backgroundColor = "var(--clr-main)";
+        header.style.backgroundColor = "var(--clr-main-dark)";
+        main.style.backgroundColor = "var(--clr-main)";
+        footer.style.backgroundColor = "var(--clr-main-dark)";
+        sliderCircle.style.backgroundColor = "var(--clr-slate)";
+}
+
+function darkTheme() {
+        slider.checked = true;
+        body.style.backgroundColor = "var(--clr-slate)";
+        header.style.backgroundColor = "var(--clr-slate-dark)";
+        main.style.backgroundColor = "var(--clr-slate)";
+        footer.style.backgroundColor = "var(--clr-slate-dark)";
+        sliderCircle.style.backgroundColor = "var(--clr-main)";
 }
 
 function appendNumber(number) {
@@ -25,7 +51,7 @@ function appendNumber(number) {
 }
 function appendSomething(type, thing) {
     if (display.innerHTML === 'Error!' || display.innerHTML === 'NaN' || display.innerHTML === 'NaN' ) clearDisplay()
-    if (display.innerHTML.length > 15) return;
+    if (display.innerHTML.length > 13) return;
     if (type === "operator") appendOperator(thing)
     if (type === "number") appendNumber(thing)
 }
@@ -38,7 +64,12 @@ function clearDisplay() {
 }
 
 function deleteLast() {
-    display.innerHTML = display.innerHTML.slice(0, -1);
+    let content = display.innerHTML;
+    if (content.endsWith(' + ') || content.endsWith(' - ') || content.endsWith(' * ') || content.endsWith(' / ')) {
+        display.innerHTML = content.slice(0, -3);
+    } else {
+        display.innerHTML = content.slice(0, -1);
+    }
     if (display.innerHTML === "") display.innerHTML = "0";
 }
 
@@ -71,6 +102,3 @@ function handleKeyboardInput(input) {
     appendSomething('operator', input.key);
 }
 
-function themeChange(theme) {
-    
-}
