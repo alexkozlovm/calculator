@@ -4,6 +4,7 @@ const body = document.querySelector("body");
 const header = document.querySelector("header");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
+const sliderCircle = document.querySelector(".slider .circle ");
 
 display.innerHTML = "0";
 
@@ -14,6 +15,7 @@ if (systemSettingDark.matches) {
     header.style.backgroundColor = "var(--clr-slate-dark)";
     main.style.backgroundColor = "var(--clr-slate)";
     footer.style.backgroundColor = "var(--clr-slate-dark)";
+    sliderCircle.style.backgroundColor = "var(--clr-main)";
 }
 
 function appendNumber(number) {
