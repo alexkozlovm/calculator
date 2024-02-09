@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Character set for universal language support -->
     <meta charset="UTF-8" />
+    <!-- Viewport for responsive design, scaling on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
+    <!-- External CSS link for styling -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- SEO meta tags -->
     <meta name="description" content="Basic 4 function calculator">
     <meta name="keywords" content="Math, Calculator">
     <meta name="author" content="Alex Kozlov">
   </head>
   <body>
     <header>
+      <!-- Calculator heading -->
       <div id="heading">
         <h1>Calculator</h1>
       </div>
+      <!-- Theme switch UI component -->
       <label class="ui-switch">
         <input type="checkbox">
         <div class="slider">
           <div class="circle"></div>
         </div>
       </label>
-      
-    </header>
     </header>
     <main>
+      <!-- Calculator display and buttons -->
       <div id="calculator">
         <div id="display">
           <h2 class="display"></h2>
         </div>
         <div id="buttons">
+            <!-- Clear and delete buttons -->
             <div id="big-buttons">
                 <button class="big-button" id="clear" onclick="clearDisplay()">clear</button>
                 <button class="big-button" id="delete" onclick="deleteLast()">delete</button>
             </div>
+          <!-- Number and operation buttons -->
+          <!-- Buttons for numbers and operations with onclick events -->
           <button class="small-button" onclick="appendSomething('number', 1)">1</button>
           <button class="small-button" onclick="appendSomething('number', 2)">2</button>
           <button class="small-button" onclick="appendSomething('number', 3)">3</button>
@@ -53,11 +61,13 @@
       </div>
     </main>
     <footer>
+      <!-- Credit link -->
       <p>
         Made by
-        <a target="_blank" herf="https://github.com/alexkozlovm">Alex Kozlov</a>
+        <a target="_blank" href="https://github.com/alexkozlovm">Alex Kozlov</a>
       </p>
     </footer>
+    <!-- External JavaScript link -->
     <script src="script.js"></script>
   </body>
 </html>
