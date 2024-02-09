@@ -1,4 +1,6 @@
+/* CSS Variables for theme colors */
 :root {
+    /* Color scheme */
     --clr-main: #FCB31B;
     --clr-secondary: rgb(27, 27, 27);
     --clr-main-dark: #d09923;
@@ -9,11 +11,13 @@
     --clr-slate-light: #5e5e5e;
     --clr-slate-lightish: #6e6e6e;
 }
+/* Universal box-sizing for consistent element sizing */
 *, *::after, *::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+/* Styling for body, header, buttons, etc. */
 body {
     color: var(--clr-text);
     background-color: var(--clr-main);
@@ -90,6 +94,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+/* Additional styles for layout, button interaction effects, and responsiveness */
 .operator {
     background-color: var(--clr-slate-light);
 }
@@ -114,6 +119,7 @@ button:hover {
         transform: translateX(0);
     }
 }
+/* Media queries for responsive design adjustments based on screen size */
 @media (max-height: 1200px) {
     .small-button {
         height: 12vh;
@@ -174,7 +180,7 @@ button:hover {
         width: 90%;
     }   
 }
-/* UI switch settings 👇 */
+/* custom UI switch settings 👇 */
 
 .ui-switch {
     /* switch */
@@ -259,3 +265,15 @@ button:hover {
     width: 0;
     height: 0;
   }
+  
+
+
+/* Additional styles for layout, button interaction effects, and responsiveness */
+/* Media queries for responsive design adjustments based on screen size */
+@media (max-width: ...px) {
+    /* Adjustments for calculator width */
+}
+/* UI switch custom styling */
+.ui-switch {
+    /* Styling for the theme switch */
+}
