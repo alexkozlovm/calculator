@@ -28,11 +28,10 @@ header {
     text-align: center;
     font-size: 2rem;
     padding: 2.5rem;
-    display: flex;
-    justify-content: center;
 }
 #heading {
-    margin-left: 40vw;
+    display: flex;
+    justify-content: center;
 }
 main {
     background-color: var(--clr-main);
@@ -140,7 +139,9 @@ button:hover {
     --circle-diameter: 32px;
     --circle-bg: var(--clr-slate);
     --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
-    margin-left: 40vw;
+    position: absolute;
+    top: 3%;
+    right: 2%;
   }
   
   .ui-switch input {
@@ -214,18 +215,6 @@ button:hover {
     width: 0;
     height: 0;
   }
-  
-
-
-/* Additional styles for layout, button interaction effects, and responsiveness */
-/* Media queries for responsive design adjustments based on screen size */
-@media (max-width: ...px) {
-    /* Adjustments for calculator width */
-}
-/* UI switch custom styling */
-.ui-switch {
-    /* Styling for the theme switch */
-}
 
 footer a {
     color: var(--clr-text);
