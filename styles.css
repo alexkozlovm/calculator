@@ -11,6 +11,7 @@
     --clr-slate-light: #5e5e5e;
     --clr-slate-lightish: #6e6e6e;
 }
+
 /* Universal box-sizing for consistent element sizing */
 *, *::after, *::before {
     box-sizing: border-box;
@@ -48,8 +49,8 @@ button {
 }
 .big-button {
     margin: 1%;
+    aspect-ratio: 2 / 0.8;
     width: 45%;
-    padding: 5.5% 0;
     border-radius: 10px;
     font-size: 3rem;
     background-color: var(--clr-main-dark);
@@ -57,8 +58,8 @@ button {
 .small-button {
     background-color: var(--clr-slate);
     border-radius: 50%;
+    aspect-ratio: 1 / 1;
     width: 20%;
-    height: 11.4vh;
     font-size: 2rem;
     margin: 1%;
 }
@@ -83,7 +84,7 @@ footer {
     text-align: right;   
    padding: 2rem 20px;
     width: 90%;
-    height: 25%;
+    aspect-ratio: 4 / 1;    
     margin: auto;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -94,7 +95,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-/* Additional styles for layout, button interaction effects, and responsiveness */
+/* Additional styles for layout, responsivness, and button interaction effects */
 .operator {
     background-color: var(--clr-slate-light);
 }
@@ -119,66 +120,14 @@ button:hover {
         transform: translateX(0);
     }
 }
-/* Media queries for responsive design adjustments based on screen size */
-@media (max-height: 1200px) {
-    .small-button {
-        height: 12vh;
-    }
-}
-@media (max-height: 1000px) {
-    .small-button {
-        height: 14.5vh;
-    }
-}
-@media (max-height: 800px) {
-    .small-button {
-        height: 17.5vh;
-    }
-}
-@media (max-height: 600px) {
-    .small-button {
-        height: 21.5vh;
-    }
-}
-@media (max-height: 400px) {
-    .small-button {
-        height: 25vh;
-    }
-}
-@media (max-width: 2000px) {
-    #calculator {
-        width: 40%;
-    }   
-}
-@media (max-width: 1600px) {
-    #calculator {
-        width: 45%;
-    }   
-}
-@media (max-width: 1400px) {
-    #calculator {
-        width: 50%;
-    }   
-}
-@media (max-width: 1200px) {
-    #calculator {
-        width: 60%;
-    }   
-}
-@media (max-width: 1000px) {
-    #calculator {
-        width: 70%;
-    }   
-}
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     #calculator {
         width: 80%;
-    }   
-}
-@media (max-width: 600px) {
+    }
+}@media (max-width: 1448px) {
     #calculator {
-        width: 90%;
-    }   
+        width: 60%;
+    }
 }
 /* custom UI switch settings 👇 */
 
@@ -276,4 +225,8 @@ button:hover {
 /* UI switch custom styling */
 .ui-switch {
     /* Styling for the theme switch */
+}
+
+footer a {
+    color: var(--clr-text);
 }
